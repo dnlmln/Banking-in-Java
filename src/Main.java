@@ -1,3 +1,4 @@
+import java.io.Console;
 import java.util.Scanner;
 public class Main {
 
@@ -26,12 +27,29 @@ public class Main {
             System.out.println("");
 
 
-            switch(choice){
-                case 1 -> showBalance(balance);
-                case 2 -> balance = balance + deposit();
-                case 3 -> balance = balance - withdraw(balance);
-                case 4 -> isRunning = false;
-                default -> System.out.println("Invalid Choice.");
+            //switch(choice){
+            //    case 1 -> showBalance(balance);
+            //    case 2 -> balance = balance + deposit();
+            //    case 3 -> balance = balance - withdraw(balance);
+            //    case 4 -> isRunning = false;
+            //    default -> System.out.println("Invalid Choice.");
+            // }
+
+            if (choice == 1) {
+                showBalance(balance);
+            }
+            else if (choice == 2) {
+                balance = balance + deposit();
+            }
+            else if (choice == 3) {
+                balance = balance - withdraw(balance);
+            }
+            else if (choice == 4) {
+                System.out.println("Good bye!");
+                isRunning = false;
+            }
+            else {
+                System.out.println("Invalid Choice.");
             }
 
 
